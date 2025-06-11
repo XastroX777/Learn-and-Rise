@@ -1,0 +1,804 @@
+<!DOCTYPE html>
+<!-- saved from url=(0088)https://13ad8377-fc81-4e51-8276-53eee51fcc32-%2D1749632400-%2D1bbbf77f.app.yourware.app/ -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn &amp; Rise: Community Micro-Schools for All</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+            color: white;
+            padding: 1rem 0;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 2rem;
+        }
+        
+        .involvement-option:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #ffeb3b;
+        }
+        
+        .language-selector {
+            display: flex;
+            align-items: center;
+            margin-left: 2rem;
+        }
+        
+        .language-selector button {
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            color: white;
+            padding: 0.3rem 0.7rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+        
+        .language-selector button:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('https://public.youware.com/users-website-assets/prod/13ad8377-fc81-4e51-8276-53eee51fcc32/g1566f0cf324d2ab9d6fe6398c9a648281d7865a9075c272f2f45fba8f9ed57a2d58fbaa90390269ac8ad16c34562f5d5ab79d1db8cb0f5af201cd0d49d8b8b5d_640.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            padding: 0 2rem;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .btn {
+            display: inline-block;
+            background: #ff6b35;
+            color: white;
+            padding: 1rem 2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(255, 107, 53, 0.3);
+        }
+
+        .btn:hover {
+            background: #e55a2b;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 107, 53, 0.4);
+        }
+
+        .section {
+            padding: 5rem 0;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            color: #1e3c72;
+        }
+
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 3rem;
+            margin-top: 3rem;
+        }
+
+        .feature {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: translateY(-5px);
+        }
+
+        .feature-icon {
+            font-size: 3rem;
+            color: #ff6b35;
+            margin-bottom: 1rem;
+        }
+
+        .feature h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: #1e3c72;
+        }
+
+        .how-it-works {
+            background: #f8f9fa;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .step {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
+            position: relative;
+        }
+
+        .step-number {
+            position: absolute;
+            top: -15px;
+            left: 2rem;
+            background: #ff6b35;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .step h3 {
+            margin-top: 1rem;
+            margin-bottom: 1rem;
+            color: #1e3c72;
+        }
+
+        .resources {
+            background: #1e3c72;
+            color: white;
+        }
+
+        .resources .section-title {
+            color: white;
+        }
+
+        .resource-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .resource-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .resource-card h3 {
+            color: #ffeb3b;
+            margin-bottom: 1rem;
+        }
+
+        .resource-list {
+            list-style: none;
+        }
+
+        .resource-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1rem;
+            position: relative;
+        }
+
+        .resource-list li:before {
+            content: "•";
+            color: #ff6b35;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .cta {
+            background: linear-gradient(135deg, #ff6b35 0%, #f7931e 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .cta .section-title {
+            color: white;
+        }
+
+        footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .hero p {
+                font-size: 1.1rem;
+            }
+            
+            .features {
+                grid-template-columns: 1fr;
+            }
+            
+            .steps {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+    <script>
+        // Translation data
+        const translations = {
+            english: {
+                home: "Home",
+                about: "About",
+                howItWorks: "How It Works",
+                resources: "Resources",
+                contact: "Contact",
+                learnRise: "Learn & Rise",
+                communityMicroSchools: "Community Micro-Schools for All",
+                empoweringChildren: "Empowering children aged 6-14 from low-income or remote communities with quality education access through innovative community-based learning.",
+                learnMore: "Learn More",
+                ourMission: "Our Mission",
+                missionText: "Learn & Rise is dedicated to providing quality education to children aged 6 to 14 from low-income or remote communities with limited access to traditional schooling. We transform available community spaces into vibrant learning environments, combining traditional teaching with innovative digital content.",
+                communityBased: "Community-Based",
+                communityBasedText: "Converting community halls, places of worship, and unused shops into accessible classrooms for local children.",
+                smallGroupLearning: "Small Group Learning",
+                smallGroupLearningText: "Starting with 10-20 students per school to ensure personalized attention and quality education for every child.",
+                hybridEducation: "Hybrid Education",
+                hybridEducationText: "Combining traditional classroom instruction with offline digital content using tablets and portable servers.",
+                howItWorksTitle: "How It Works",
+                step1Title: "Setting Up Community Micro-Schools",
+                step1Text: "We convert available community spaces such as halls, places of worship, or unused shops into simple classrooms. Each school starts with a small group (10–20 students) to make management easier and ensure quality education.",
+                step2Title: "Training Local Teachers",
+                step2Text: "Educated local youth are selected and trained to become community teachers. They receive ongoing support through teaching tools and periodic training to maintain educational quality.",
+                step3Title: "Hybrid Learning Model",
+                step3Text: "Traditional classroom instruction is combined with offline digital content using tablets or portable servers. Subjects include literacy, numeracy, and practical life skills like hygiene, teamwork, and financial awareness.",
+                step4Title: "Flexible Learning Schedules",
+                step4Text: "Classes are held at different times (morning or evening) to accommodate children who work or help their families. Instead of rigid age-based grades, the system focuses on each child's learning progress.",
+                step5Title: "Community & Family Involvement",
+                step5Text: "Awareness sessions and adult literacy classes are offered to parents. Enrolled children receive incentives like free meals or basic health checkups to encourage attendance.",
+                requiredResources: "Required Resources",
+                humanResources: "Human Resources",
+                physicalResources: "Physical Resources",
+                educationalDigitalResources: "Educational & Digital Resources",
+                financialResources: "Financial Resources",
+                humanResourcesList: [
+                    "Trained local teachers",
+                    "One field coordinator per region",
+                    "Visiting trainers for tech or assessments"
+                ],
+                physicalResourcesList: [
+                    "Free or low-rent community spaces",
+                    "Basic furniture: tables, mats, blackboards",
+                    "Basic school supplies"
+                ],
+                educationalDigitalResourcesList: [
+                    "Tablets or basic laptops (with solar chargers if needed)",
+                    "Offline educational content such as Khan Academy and Kolibri",
+                    "Printed books, stories, and hands-on activity materials"
+                ],
+                financialResourcesList: [
+                    "Initial funding from NGOs or social responsibility grants",
+                    "Small family contributions after a free trial period",
+                    "Donations of devices and books from charities or individual sponsors"
+                ],
+                getInvolved: "Get Involved",
+                getInvolvedText: "Join us in making quality education accessible to all children. Whether you're a potential partner, donor, or volunteer, we'd love to hear from you.",
+                contactUs: "Contact Us",
+                copyright: "© 2025 Learn & Rise: Community Micro-Schools for All",
+                empoweringThroughEducation: "Empowering children through education"
+            },
+            arabic: {
+                home: "الرئيسية",
+                about: "من نحن",
+                howItWorks: "كيف يعمل",
+                impact: "التأثير",
+                resources: "الموارد",
+                contact: "اتصل بنا",
+                learnRise: "تعلّم وارتقِ",
+                communityMicroSchools: "مدارس مجتمعية صغيرة للجميع",
+                empoweringChildren: "تمكين الأطفال من عمر 6-14 سنة من المجتمعات ذات الدخل المنخفض أو النائية بفرص تعليمية جيدة من خلال التعلم المجتمعي المبتكر.",
+                learnMore: "اعرف المزيد",
+                ourMission: "رسالتنا",
+                missionText: "تعلّم وارتقِ مخصص لتوفير تعليم جيد للأطفال من سن 6 إلى 14 من المجتمعات ذات الدخل المنخفض أو النائية مع وصول محدود إلى التعليم التقليدي. نقوم بتحويل المساحات المجتمعية المتاحة إلى بيئات تعليمية نابضة بالحياة، مع دمج التدريس التقليدي مع المحتوى الرقمي المبتكر.",
+                communityBased: "قائم على المجتمع",
+                communityBasedText: "تحويل قاعات المجتمع وأماكن العبادة والمحلات غير المستخدمة إلى فصول دراسية يمكن الوصول إليها للأطفال المحليين.",
+                smallGroupLearning: "تعلم المجموعات الصغيرة",
+                smallGroupLearningText: "البدء بـ 10-20 طالبًا لكل مدرسة لضمان الاهتمام الشخصي والتعليم الجيد لكل طفل.",
+                hybridEducation: "التعليم المدمج",
+                hybridEducationText: "دمج التعليم الصفي التقليدي مع المحتوى الرقمي غير المتصل بالإنترنت باستخدام الأجهزة اللوحية والخوادم المحمولة.",
+                howItWorksTitle: "كيف يعمل",
+                step1Title: "إنشاء مدارس مجتمعية صغيرة",
+                step1Text: "نقوم بتحويل المساحات المجتمعية المتاحة مثل القاعات وأماكن العبادة أو المحلات غير المستخدمة إلى فصول دراسية بسيطة. تبدأ كل مدرسة بمجموعة صغيرة (10-20 طالبًا) لتسهيل الإدارة وضمان جودة التعليم.",
+                step2Title: "تدريب المعلمين المحليين",
+                step2Text: "يتم اختيار وتدريب الشباب المتعلمين المحليين ليصبحوا معلمين مجتمعيين. يتلقون دعمًا مستمرًا من خلال أدوات التدريس والتدريب الدوري للحفاظ على جودة التعليم.",
+                step3Title: "نموذج التعلم المدمج",
+                step3Text: "يتم دمج التعليم الصفي التقليدي مع المحتوى الرقمي غير المتصل بالإنترنت باستخدام الأجهزة اللوحية أو الخوادم المحمولة. تشمل المواد الدراسية محو الأمية والحساب والمهارات الحياتية العملية مثل النظافة والعمل الجماعي والوعي المالي.",
+                step4Title: "جداول تعلم مرنة",
+                step4Text: "تُعقد الدروس في أوقات مختلفة (صباحًا أو مساءً) لاستيعاب الأطفال الذين يعملون أو يساعدون أسرهم. بدلاً من الصفوف الصارمة القائمة على العمر، يركز النظام على تقدم تعلم كل طفل.",
+                step5Title: "إشراك المجتمع والأسرة",
+                step5Text: "يتم تقديم جلسات توعية ودروس محو أمية للبالغين للآباء. يتلقى الأطفال المسجلين حوافز مثل وجبات مجانية أو فحوصات صحية أساسية لتشجيع الحضور.",
+                requiredResources: "الموارد المطلوبة",
+                humanResources: "الموارد البشرية",
+                physicalResources: "الموارد المادية",
+                educationalDigitalResources: "الموارد التعليمية والرقمية",
+                financialResources: "الموارد المالية",
+                humanResourcesList: [
+                    "معلمون محليون مدربون",
+                    "منسق ميداني واحد لكل منطقة",
+                    "مدربون زائرون للتكنولوجيا أو التقييمات"
+                ],
+                physicalResourcesList: [
+                    "مساحات مجتمعية مجانية أو منخفضة الإيجار",
+                    "أثاث أساسي: طاولات، حصائر، سبورات",
+                    "لوازم مدرسية أساسية"
+                ],
+                educationalDigitalResourcesList: [
+                    "أجهزة لوحية أو أجهزة كمبيوتر محمولة أساسية (مع شواحن شمسية إذا لزم الأمر)",
+                    "محتوى تعليمي غير متصل بالإنترنت مثل أكاديمية خان و كوليبري",
+                    "كتب مطبوعة وقصص ومواد أنشطة عملية"
+                ],
+                financialResourcesList: [
+                    "تمويل أولي من المنظمات غير الحكومية أو منح المسؤولية الاجتماعية",
+                    "مساهمات عائلية صغيرة بعد فترة تجريبية مجانية",
+                    "تبرعات بالأجهزة والكتب من الجمعيات الخيرية أو الرعاة الأفراد"
+                ],
+                getInvolved: "شارك معنا",
+                getInvolvedText: "انضم إلينا في جعل التعليم الجيد متاحًا لجميع الأطفال. سواء كنت شريكًا محتملاً أو متبرعًا أو متطوعًا، سنكون سعداء بالتواصل معك.",
+                contactUs: "اتصل بنا",
+                copyright: "© 2025 تعلّم وارتقِ: مدارس مجتمعية صغيرة للجميع",
+                empoweringThroughEducation: "تمكين الأطفال من خلال التعليم"
+            }
+        };
+        
+        // Function to toggle language
+        function toggleLanguage() {
+            const htmlElement = document.documentElement;
+            const isArabic = htmlElement.lang === 'ar';
+            const languageToggle = document.getElementById('language-toggle');
+            
+            if (isArabic) {
+                // Switch to English
+                htmlElement.lang = 'en';
+                htmlElement.dir = 'ltr';
+                languageToggle.textContent = 'العربية';
+                updateContent('english');
+            } else {
+                // Switch to Arabic
+                htmlElement.lang = 'ar';
+                htmlElement.dir = 'rtl';
+                languageToggle.textContent = 'English';
+                updateContent('arabic');
+            }
+        }
+        
+        // Function to update content based on selected language
+        function updateContent(language) {
+            const t = translations[language];
+            
+            // Update navigation
+            document.querySelectorAll('.nav-links a').forEach((link, index) => {
+                if (index === 0) link.textContent = t.home;
+                if (index === 1) link.textContent = t.about;
+                if (index === 2) link.textContent = t.howItWorks;
+                if (index === 3) link.textContent = t.impact;
+                if (index === 4) link.textContent = t.resources;
+                if (index === 5) link.textContent = t.contact;
+            });
+            
+            // Update hero section
+            document.querySelector('.logo').textContent = t.learnRise;
+            document.querySelector('.hero h1').textContent = t.learnRise;
+            document.querySelector('.hero p:nth-of-type(1)').textContent = t.communityMicroSchools;
+            document.querySelector('.hero p:nth-of-type(2)').textContent = t.empoweringChildren;
+            document.querySelector('.hero .btn').textContent = t.learnMore;
+            
+            // Update mission section
+            document.querySelector('#about .section-title').textContent = t.ourMission;
+            document.querySelector('#about p').textContent = t.missionText;
+            
+            // Update features
+            const features = document.querySelectorAll('.feature');
+            features[0].querySelector('h3').textContent = t.communityBased;
+            features[0].querySelector('p').textContent = t.communityBasedText;
+            features[1].querySelector('h3').textContent = t.smallGroupLearning;
+            features[1].querySelector('p').textContent = t.smallGroupLearningText;
+            features[2].querySelector('h3').textContent = t.hybridEducation;
+            features[2].querySelector('p').textContent = t.hybridEducationText;
+            
+            // Update how it works section
+            document.querySelector('#how-it-works .section-title').textContent = t.howItWorksTitle;
+            
+            const steps = document.querySelectorAll('.step');
+            steps[0].querySelector('h3').textContent = t.step1Title;
+            steps[0].querySelector('p').textContent = t.step1Text;
+            steps[1].querySelector('h3').textContent = t.step2Title;
+            steps[1].querySelector('p').textContent = t.step2Text;
+            steps[2].querySelector('h3').textContent = t.step3Title;
+            steps[2].querySelector('p').textContent = t.step3Text;
+            steps[3].querySelector('h3').textContent = t.step4Title;
+            steps[3].querySelector('p').textContent = t.step4Text;
+            steps[4].querySelector('h3').textContent = t.step5Title;
+            steps[4].querySelector('p').textContent = t.step5Text;
+            
+            // Update resources section
+            document.querySelector('#resources .section-title').textContent = t.requiredResources;
+            
+            const resourceCards = document.querySelectorAll('.resource-card');
+            resourceCards[0].querySelector('h3').textContent = t.humanResources;
+            resourceCards[1].querySelector('h3').textContent = t.physicalResources;
+            resourceCards[2].querySelector('h3').textContent = t.educationalDigitalResources;
+            resourceCards[3].querySelector('h3').textContent = t.financialResources;
+            
+            // Update resource lists
+            const resourceLists = document.querySelectorAll('.resource-list');
+            
+            // Human Resources
+            const humanResourceItems = resourceLists[0].querySelectorAll('li');
+            t.humanResourcesList.forEach((text, index) => {
+                if (humanResourceItems[index]) humanResourceItems[index].textContent = text;
+            });
+            
+            // Physical Resources
+            const physicalResourceItems = resourceLists[1].querySelectorAll('li');
+            t.physicalResourcesList.forEach((text, index) => {
+                if (physicalResourceItems[index]) physicalResourceItems[index].textContent = text;
+            });
+            
+            // Educational & Digital Resources
+            const eduResourceItems = resourceLists[2].querySelectorAll('li');
+            t.educationalDigitalResourcesList.forEach((text, index) => {
+                if (eduResourceItems[index]) eduResourceItems[index].textContent = text;
+            });
+            
+            // Financial Resources
+            const financialResourceItems = resourceLists[3].querySelectorAll('li');
+            t.financialResourcesList.forEach((text, index) => {
+                if (financialResourceItems[index]) financialResourceItems[index].textContent = text;
+            });
+            
+            // Update contact section
+            document.querySelector('#contact .section-title').textContent = t.getInvolved;
+            document.querySelector('#contact p').textContent = t.getInvolvedText;
+            document.querySelector('#contact .btn').textContent = t.contactUs;
+            
+            // Update footer
+            const footerPs = document.querySelectorAll('footer p');
+            footerPs[0].textContent = t.copyright;
+            footerPs[1].textContent = t.empoweringThroughEducation;
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Learn &amp; Rise</div>
+            <ul class="nav-links">
+                <li><a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/#home">Home</a></li>
+                <li><a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/#about">About</a></li>
+                <li><a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/#how-it-works">How It Works</a></li>
+                <li><a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/#impact">Impact</a></li>
+                <li><a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/#resources">Resources</a></li>
+                <li><a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/team.html">Our Team</a></li>
+                <li><a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/enroll.html">Enroll</a></li>
+                <li><a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/#contact">Contact</a></li>
+                <li class="language-selector">
+                    <button onclick="toggleLanguage()" id="language-toggle">العربية</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <h1>Learn &amp; Rise</h1>
+            <p>Community Micro-Schools for All</p>
+            <p>Empowering children aged 6-14 from low-income or remote communities with quality education access through innovative community-based learning.</p>
+            <a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/#about" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">Our Mission</h2>
+            <p style="text-align: center; font-size: 1.2rem; max-width: 800px; margin: 0 auto;">
+                Learn &amp; Rise is dedicated to providing quality education to children aged 6 to 14 from low-income or remote communities with limited access to traditional schooling. We transform available community spaces into vibrant learning environments, combining traditional teaching with innovative digital content.
+            </p>
+            
+            <div class="features">
+                <div class="feature">
+                    <div class="feature-icon">🏫</div>
+                    <h3>Community-Based</h3>
+                    <p>Converting community halls, places of worship, and unused shops into accessible classrooms for local children.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">👥</div>
+                    <h3>Small Group Learning</h3>
+                    <p>Starting with 10-20 students per school to ensure personalized attention and quality education for every child.</p>
+                </div>
+                <div class="feature">
+                    <div class="feature-icon">📱</div>
+                    <h3>Hybrid Education</h3>
+                    <p>Combining traditional classroom instruction with offline digital content using tablets and portable servers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works section">
+        <div class="container">
+            <h2 class="section-title">How It Works</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Setting Up Community Micro-Schools</h3>
+                    <p>We convert available community spaces such as halls, places of worship, or unused shops into simple classrooms. Each school starts with a small group (10–20 students) to make management easier and ensure quality education.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Training Local Teachers</h3>
+                    <p>Educated local youth are selected and trained to become community teachers. They receive ongoing support through teaching tools and periodic training to maintain educational quality.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Hybrid Learning Model</h3>
+                    <p>Traditional classroom instruction is combined with offline digital content using tablets or portable servers. Subjects include literacy, numeracy, and practical life skills like hygiene, teamwork, and financial awareness.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">4</div>
+                    <h3>Flexible Learning Schedules</h3>
+                    <p>Classes are held at different times (morning or evening) to accommodate children who work or help their families. Instead of rigid age-based grades, the system focuses on each child's learning progress.</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">5</div>
+                    <h3>Community &amp; Family Involvement</h3>
+                    <p>Awareness sessions and adult literacy classes are offered to parents. Enrolled children receive incentives like free meals or basic health checkups to encourage attendance.</p>
+                </div>
+            </div>
+        </div>
+    </section>    <section id="resources" class="resources section">
+        <div class="container">
+            <h2 class="section-title">Required Resources</h2>
+            <div class="resource-grid">
+                <div class="resource-card">
+                    <h3>Human Resources</h3>
+                    <ul class="resource-list">
+                        <li>Trained local teachers</li>
+                        <li>One field coordinator per region</li>
+                        <li>Visiting trainers for tech or assessments</li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>Physical Resources</h3>
+                    <ul class="resource-list">
+                        <li>Free or low-rent community spaces</li>
+                        <li>Basic furniture: tables, mats, blackboards</li>
+                        <li>Basic school supplies</li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>Educational &amp; Digital Resources</h3>
+                    <ul class="resource-list">
+                        <li>Tablets or basic laptops (with solar chargers if needed)</li>
+                        <li>Offline educational content such as Khan Academy and Kolibri</li>
+                        <li>Printed books, stories, and hands-on activity materials</li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>Financial Resources</h3>
+                    <ul class="resource-list">
+                        <li>Initial funding from NGOs or social responsibility grants</li>
+                        <li>Small family contributions after a free trial period</li>
+                        <li>Donations of devices and books from charities or individual sponsors</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="impact" class="section" style="background-color: #f8f9fa;">
+        <div class="container">
+            <h2 class="section-title">Our Impact</h2>
+            
+            <div style="display: flex; flex-wrap: wrap; justify-content: space-around; margin-bottom: 3rem;">
+                <div style="text-align: center; padding: 1.5rem; flex: 1; min-width: 200px;">
+                    <div style="font-size: 3rem; font-weight: bold; color: #ff6b35; margin-bottom: 0.5rem;">24+</div>
+                    <p style="font-size: 1.2rem; color: #1e3c72;">Micro-Schools Established</p>
+                </div>
+                <div style="text-align: center; padding: 1.5rem; flex: 1; min-width: 200px;">
+                    <div style="font-size: 3rem; font-weight: bold; color: #ff6b35; margin-bottom: 0.5rem;">560</div>
+                    <p style="font-size: 1.2rem; color: #1e3c72;">Children Enrolled</p>
+                </div>
+                <div style="text-align: center; padding: 1.5rem; flex: 1; min-width: 200px;">
+                    <div style="font-size: 3rem; font-weight: bold; color: #ff6b35; margin-bottom: 0.5rem;">85%</div>
+                    <p style="font-size: 1.2rem; color: #1e3c72;">Improved Literacy Rates</p>
+                </div>
+                <div style="text-align: center; padding: 1.5rem; flex: 1; min-width: 200px;">
+                    <div style="font-size: 3rem; font-weight: bold; color: #ff6b35; margin-bottom: 0.5rem;">42</div>
+                    <p style="font-size: 1.2rem; color: #1e3c72;">Local Teachers Trained</p>
+                </div>
+            </div>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div>
+                    <img src="./g2d5ba3c78a0dd7d31be03ade23a106bf7a3da9c5c1a3cda6867e67db26cebecfa5ef530551a124ec6dd17daf60fe4fedf1911ef90cca81c84c05decb0199806f_640.jpg" alt="Educational impact statistics" style="width: 100%; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);">
+                </div>
+                <div>
+                    <h3 style="color: #1e3c72; margin-bottom: 1rem; font-size: 1.5rem;">Measurable Results</h3>
+                    <p style="margin-bottom: 1rem;">Our micro-schools have demonstrated significant positive impacts on the communities we serve, with measurable improvements in:</p>
+                    <ul style="list-style-type: none; padding-left: 0;">
+                        <li style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                            <span style="color: #ff6b35; margin-right: 0.5rem;">✓</span> Academic performance in literacy and numeracy
+                        </li>
+                        <li style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                            <span style="color: #ff6b35; margin-right: 0.5rem;">✓</span> School attendance and retention rates
+                        </li>
+                        <li style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                            <span style="color: #ff6b35; margin-right: 0.5rem;">✓</span> Student confidence and self-efficacy
+                        </li>
+                        <li style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                            <span style="color: #ff6b35; margin-right: 0.5rem;">✓</span> Parent and community engagement
+                        </li>
+                        <li style="margin-bottom: 0.5rem; display: flex; align-items: center;">
+                            <span style="color: #ff6b35; margin-right: 0.5rem;">✓</span> Skills development for local teachers
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="testimonials" class="section" style="background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%); color: white;">
+        <div class="container">
+            <h2 class="section-title" style="color: white;">Success Stories</h2>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <div style="display: flex; margin-bottom: 1.5rem;">
+                        <img src="./gecf6c1f45e2fb7a331253cb3eda684502f8ca404cf1aad42e14928b58d4effe6fd95379470b6e574fd12a6a4dce24b6019a0490b6f1870295811345f38c36b98_640.jpg" alt="Student testimonial" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-right: 1rem;">
+                        <div>
+                            <h3 style="color: #ffeb3b; margin-bottom: 0.3rem;">Nabirye Community School</h3>
+                            <p style="font-style: italic; opacity: 0.8;">Kampala Region</p>
+                        </div>
+                    </div>
+                    <p>"Our village never had a proper school before. Now our children learn using tablets and have teachers who care about them. The school has become the center of our community."</p>
+                    <p style="margin-top: 1rem; font-weight: bold;">— Sarah Mutesi, Parent</p>
+                </div>
+                
+                <div style="background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 10px; backdrop-filter: blur(10px); border: 1px solid rgba(255, 255, 255, 0.2);">
+                    <div style="display: flex; margin-bottom: 1.5rem;">
+                        <img src="./gbd6f408d7c58409886367af9afeeac2ed3e08fcb1f04d3e4df5a3f4c5d9ced3792cabe26bff246add18c14be117f9fff_640.jpg" alt="Teacher testimonial" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; margin-right: 1rem;">
+                        <div>
+                            <h3 style="color: #ffeb3b; margin-bottom: 0.3rem;">Sunshine Micro-School</h3>
+                            <p style="font-style: italic; opacity: 0.8;">Eastern Province</p>
+                        </div>
+                    </div>
+                    <p>"The training I received through Learn &amp; Rise changed my life. Now I'm able to teach children in my own community, using modern methods and technology that makes learning fun."</p>
+                    <p style="margin-top: 1rem; font-weight: bold;">— Daniel Ochieng, Community Teacher</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="cta section">
+        <div class="container">
+            <h2 class="section-title">Get Involved</h2>
+            <p style="font-size: 1.2rem; max-width: 700px; margin: 0 auto 2rem auto;">
+                Join us in making quality education accessible to all children. Whether you're a potential partner, donor, or volunteer, we'd love to hear from you.
+            </p>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+                <a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/#" class="involvement-option" style="text-decoration: none; color: white; background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 10px; text-align: center; transition: transform 0.3s, background 0.3s; display: block;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">💰</div>
+                    <h3 style="margin-bottom: 0.5rem;">Donate</h3>
+                    <p>Support our micro-schools with a one-time or recurring donation</p>
+                </a>
+                
+                <a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/#" class="involvement-option" style="text-decoration: none; color: white; background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 10px; text-align: center; transition: transform 0.3s, background 0.3s; display: block;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">🤝</div>
+                    <h3 style="margin-bottom: 0.5rem;">Partner</h3>
+                    <p>Collaborate with us as an organization, school, or company</p>
+                </a>
+                
+                <a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/#" class="involvement-option" style="text-decoration: none; color: white; background: rgba(255, 255, 255, 0.1); padding: 2rem; border-radius: 10px; text-align: center; transition: transform 0.3s, background 0.3s; display: block;">
+                    <div style="font-size: 2.5rem; margin-bottom: 1rem;">✋</div>
+                    <h3 style="margin-bottom: 0.5rem;">Volunteer</h3>
+                    <p>Contribute your skills and time to support our mission</p>
+                </a>
+            </div>
+            
+            <a href="https://13ad8377-fc81-4e51-8276-53eee51fcc32--1749632400--1bbbf77f.app.yourware.app/#" class="btn" style="font-size: 1.2rem; padding: 1rem 2.5rem;">Contact Us</a>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Learn &amp; Rise: Community Micro-Schools for All</p>
+            <p>Empowering children through education</p>
+        </div>
+    </footer>
+
+</body></html>
